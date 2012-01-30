@@ -1,0 +1,52 @@
+From 840346bf8c0311480e9d152b12510f3d38710861 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Sat, 1 Dec 2007 20:48:35 +0200
+Subject: [PATCH] chewmail: Add CPAN module check
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ chewmail |   26 +++++++++++++++++++++-----
+ 1 files changed, 21 insertions(+), 5 deletions(-)
+
+diff --git a/chewmail b/chewmail
+index 3453e97..0c91588 100644
+--- a/chewmail
++++ b/chewmail
+@@ -21,13 +21,29 @@ and URLs supported by that module.
+ =cut
+ 
+ use strict;
+-
+-use Mail::Box::Manager;
+-use Mail::Message;
+-use Date::Format;
+-use Date::Parse;
+ use Getopt::Long qw(:config no_ignore_case bundling);
+ 
++BEGIN
++{
++    my @list;
++
++    for ( 'Mail::Box::Manager',
++          'Mail::Message',
++          'Date::Format',
++          'Date::Parse' )
++    {
++        eval "use $_;" ;
++        push @list, $_   if $@;  # Eval error
++    }
++
++    if ( @list )
++    {
++        die q([FATAL] Perl CPAN modules are needed. Please install them with:
++
++              perl -MCPAN -e 'install $_ for @ARGV' ) . qq(@list\n);
++    }
++}
++
+ my $version = '1.2';
+ 
+ my %output_boxes = ();
+-- 
+1.5.3.GIT
+

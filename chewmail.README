@@ -1,0 +1,81 @@
+chewmail
+------------------------------------------
+
+mail archiver for various mailbox formats
+
+A Perl-based mail archiver. It uses Mail::Box so supports any mailbox
+format it does. It can filter messages into mbox's based on the
+message's date and other criteria.
+
+Additional CPAN modules need to be installed:
+
+    $ perl -MCPAN -e 'install $_ for @ARGV' \
+      Mail::Box::Manager \
+      Mail::Message \
+      Date::Format \
+      Date::Parse
+
+Runtime requirements:
+  cygwin
+  perl
+
+Build requirements:
+  cygwin
+
+Canonical homepage:
+  http://packages.debian.org/chewmail
+
+Canonical download:
+  See above
+
+Version control repository:
+
+Mailing list:
+
+Forum / Wiki:
+
+IRC channel:
+
+Upstream contact:
+  Author: Eric Dorland <eric@debian.org>
+  Bugs: Eric Dorland <eric@debian.org>
+
+License:
+  GPL-2
+
+Language:
+  Perl
+
+------------------------------------
+
+Build instructions:
+  unpack chewmail-1.2-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./chewmail*.sh all
+
+This will create:
+  chewmail-1.2-1.tar.bz2
+  chewmail-1.2-1-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distribution:
+
+usr/bin/chewmail
+usr/share/doc/Cygwin/chewmail-1.2.README
+usr/share/doc/chewmail-1.2/AUTHORS
+usr/share/doc/chewmail-1.2/COPYING
+usr/share/doc/chewmail-1.2/NEWS
+usr/share/man/man1/chewmail.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 1.2-1 -----
+- Initial release 2007-12-01 Jari Aalto
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later

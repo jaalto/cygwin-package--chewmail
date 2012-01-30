@@ -1,0 +1,2 @@
+tag1: chewmail
+  http://ftp.de.debian.org/debian/pool/main/c/chewmail/chewmail_1.2.orig.tar.gz pregexp:orig.tar.gz file:chewmail_1.2.orig.tar.gz new: x:
