@@ -1,3 +1,4 @@
+# ARCH=noarch
 sdesc: "mail archiver for various mailbox formats"
 ldesc: "A Perl-based mail archiver. It uses Mail::Box so supports any mailbox
 format it does. It can filter messages into mbox's based on the
