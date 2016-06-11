@@ -4,4 +4,4 @@ ldesc: "A Perl-based mail archiver. It uses Mail::Box so supports any mailbox
 format it does. It can filter messages into mbox's based on the
 message's date and other criteria."
 category: Mail Perl
-requires: cygwin perl
+requires: perl
