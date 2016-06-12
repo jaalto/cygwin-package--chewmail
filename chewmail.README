@@ -11,12 +11,11 @@ Additional CPAN modules need to be installed:
 
     $ perl -MCPAN -e 'install $_ for @ARGV' \
       Mail::Box::Manager \
-      Mail::Message \
-      Date::Format \
-      Date::Parse
+      Mail::Message
 
 Runtime requirements:
   perl
+  perl-TimeDate
 
 Build requirements:
   quilt
