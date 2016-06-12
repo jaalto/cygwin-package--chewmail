@@ -16,11 +16,10 @@ Additional CPAN modules need to be installed:
       Date::Parse
 
 Runtime requirements:
-  cygwin
   perl
 
 Build requirements:
-  cygwin
+  quilt
 
 Canonical homepage:
   http://packages.debian.org/chewmail
