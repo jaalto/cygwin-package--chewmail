@@ -5,14 +5,12 @@ Subject: [PATCH] chewmail: Add CPAN module check
 
 Signed-off-by: Jari Aalto <jari.aalto@cante.net>
 ---
- chewmail |   26 +++++++++++++++++++++-----
- 1 files changed, 21 insertions(+), 5 deletions(-)
+ chewmail |   24 +++++++++++++++++++-----
+ 1 file changed, 19 insertions(+), 5 deletions(-)
 
-diff --git a/chewmail b/chewmail
-index 3453e97..0c91588 100644
 --- a/chewmail
 +++ b/chewmail
-@@ -21,13 +21,29 @@ and URLs supported by that module.
+@@ -21,13 +21,27 @@ and URLs supported by that module.
  =cut
  
  use strict;
@@ -28,9 +26,7 @@ index 3453e97..0c91588 100644
 +    my @list;
 +
 +    for ( 'Mail::Box::Manager',
-+          'Mail::Message',
-+          'Date::Format',
-+          'Date::Parse' )
++          'Mail::Message' )
 +    {
 +        eval "use $_;" ;
 +        push @list, $_   if $@;  # Eval error
@@ -47,6 +43,3 @@ index 3453e97..0c91588 100644
  my $version = '1.2';
  
  my %output_boxes = ();
--- 
-1.5.3.GIT
-
